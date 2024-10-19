@@ -16,3 +16,6 @@
 - Stat upgrades (mp, hp, stamina, magical damage, physical damage, etc.)
 - World building. A base-building feature so players can work towards accumulating something (coins, resources, etc.)
 - Pets? Combat pets would be cool.
+
+### Dev Journal:
+(https://www.youtube.com/playlist?list=PLC5apqaBqNguhcXIUHlojolRcDhKGJhvA)
