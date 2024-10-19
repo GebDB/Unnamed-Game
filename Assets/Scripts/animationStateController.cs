@@ -11,6 +11,7 @@ public class AnimationStateController : MonoBehaviour
     private Vector2 moveInput = Vector2.zero;
     private bool isRunning = false;
 
+    // Sets up animation response to input
     private void Awake()
     {
         animator = GetComponent<Animator>();

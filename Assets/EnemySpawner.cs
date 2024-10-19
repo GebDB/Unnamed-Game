@@ -18,6 +18,7 @@ public class EnemySpawner : MonoBehaviour
     {
 
     }
+    // Spawn at specified locations with a random time delay.
     IEnumerator SpawnEnemy()
     {
         while (enemyCount <= maxEnemyCount)

@@ -30,6 +30,7 @@ public class EnemyHealth : MonoBehaviour
     {
         return currentHealth > 0;
     }
+    // When trigger entered, enemy takes damage if the trigger was a spell.
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("OnTriggerEntered");
@@ -46,6 +47,7 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= damage;
         
     }
+    // Flash color to signal damage taken.
     private IEnumerator FlashColor(Color flashColor, float duration)
     {
         enemyMesh.material.color = flashColor;

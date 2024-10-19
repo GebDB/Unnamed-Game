@@ -16,7 +16,8 @@ public class DealDamageToPlayer : MonoBehaviour
     {
 
     }
-    private void OnTriggerEnter(Collider other) // Use OnCollisionEnter if not using triggers
+    // When trigger entered, deal damage to the player.
+    private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Deal Damage to Player on trigger entered");
         if (other.CompareTag("Player"))

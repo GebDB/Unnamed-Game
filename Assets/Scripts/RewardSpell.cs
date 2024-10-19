@@ -6,6 +6,7 @@ public class RewardSpell : MonoBehaviour
 {
     [SerializeField] private Spell[] spells;
 
+    // When trigger entered, reward a spell to the player.
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Reward trigger entered");

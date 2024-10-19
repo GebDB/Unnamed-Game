@@ -54,8 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
         isGrounded = Physics.Raycast(transform.position, Vector3.down, groundDistance);
 
-        // Initialize moveDirection
-        Vector3 moveDirection = Vector3.zero; // Changed from (1, 1, 1) to Vector3.zero
+        Vector3 moveDirection = Vector3.zero;
 
         // Rotate towards the movement direction
         if (moveInput != Vector2.zero)
@@ -75,13 +74,9 @@ public class PlayerMovement : MonoBehaviour
             moveDirection = (cameraForward * moveInput.y + cameraRight * moveInput.x).normalized;
 
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime); // gradual rotation
         }
-
-        // Calculate speed based on whether the player is running
         float currentSpeed = isRunning ? speed * sprintMult : speed;
-
-        // Update velocity based on the moveDirection instead of moveInput
         rb.velocity = new Vector3(moveDirection.x * currentSpeed, rb.velocity.y, moveDirection.z * currentSpeed);
 
 

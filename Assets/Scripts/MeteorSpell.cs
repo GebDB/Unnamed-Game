@@ -74,6 +74,7 @@ public class MeteorSpell : Spell
             renderer.enabled = true;
         }
     }
+    // Return the spell to the pool when the effects are done playing.
     private IEnumerator ReturnSpell(float duration) {
         yield return new WaitForSeconds(duration);
         ObjectPoolManager.ReturnObjectToPool(gameObject);

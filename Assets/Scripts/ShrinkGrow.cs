@@ -18,6 +18,7 @@ public class ShrinkGrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Intended for ring spell to shrink and grow repeatedly. WIP.
         if (grow) {
             if (transform.localScale.x < maxRadius)
             {
